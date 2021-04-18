@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1039611760173",
+    "project_id": "voice-based-prescription-4e51b",
+    "storage_bucket": "voice-based-prescription-4e51b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1039611760173:android:f2467c3ee31e62ceadb2a4",
+        "android_client_info": {
+          "package_name": "com.example.voicebasedprescription"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1039611760173-rb8hvj7mf01ti3n1i0opaufbeuq8pfvp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvEg1tFskdUCNzE-rqNYBoCQ3BA0YIaz0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1039611760173-rb8hvj7mf01ti3n1i0opaufbeuq8pfvp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

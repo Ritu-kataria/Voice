@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:orientation="vertical"
+
+    android:background="@color/purple_500"
+    android:gravity="bottom"
+    android:padding="20dp">
+
+    <ImageView
+        android:id="@+id/imgid"
+        android:layout_width="75dp"
+        android:layout_height="76dp"
+        android:layout_gravity="bottom"
+        android:paddingTop="30dp"
+
+        android:src="@drawable/doctor" />
+    <TextView
+        android:id="@+id/textid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to Voice based prescription!"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:layout_marginTop="5dp"/>
+</LinearLayout>
