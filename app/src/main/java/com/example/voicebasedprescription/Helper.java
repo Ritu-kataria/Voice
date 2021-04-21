@@ -3,70 +3,68 @@ package com.example.voicebasedprescription;
 import android.widget.CheckBox;
 
  public class Helper {
-    String name;
-    String email;
-     String phone;
-     String pass;
+    String Name;
+    String Email;
+     String Phone;
+     String Password;
     CheckBox M;
     CheckBox F;
 
     public Helper() {
     }
 
-    public Helper(String name, String email, String phone, String pass) {
-        this.name = name;
-        this.email = email;
-        this.phone = phone;
-        this.pass = pass;
-        this.M = M;
-        this.F = F;
-    }
+     public Helper(String name, String email, String phone, String password) {
+         Name = name;
+         Email = email;
+         Phone = phone;
+         Password = password;
+     }
 
-    public String getName() {
-        return name;
-    }
+     public String getName() {
+         return Name;
+     }
 
-    public String getEmail() {
-        return email;
-    }
+     public void setName(String name) {
+         Name = name;
+     }
 
-    public  String getPhone() {
-        return phone;
-    }
+     public String getEmail() {
+         return Email;
+     }
 
-    public  String getPass() {
-        return pass;
-    }
+     public void setEmail(String email) {
+         Email = email;
+     }
 
-    public CheckBox getM() {
-        return M;
-    }
+     public String getPhone() {
+         return Phone;
+     }
 
-    public CheckBox getF() {
-        return F;
-    }
+     public void setPhone(String phone) {
+         Phone = phone;
+     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+     public String getPassword() {
+         return Password;
+     }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+     public void setPassword(String password) {
+         Password = password;
+     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
+     public CheckBox getM() {
+         return M;
+     }
 
-    public void setPass(String pass) {
-        this.pass = pass;
-    }
+     public void setM(CheckBox m) {
+         M = m;
+     }
 
-    public void setM(CheckBox m) {
-        M = m;
-    }
+     public CheckBox getF() {
+         return F;
+     }
 
-    public void setF(CheckBox f) {
-        F = f;
-    }
-}
+     public void setF(CheckBox f) {
+         F = f;
+     }
+ }

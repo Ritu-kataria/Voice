@@ -48,12 +48,10 @@ public class Login_Form extends AppCompatActivity {
             public void onClick(View v) {
                 String phone = mPhone.getText().toString().trim();
                 String password = mPassword.getText().toString().trim();
-                Intent intent = new Intent(Login_Form.this,MainActivity.class);
-                startActivity(intent);
-                finish();
 
 
-                /*if (TextUtils.isEmpty(phone)){
+
+                if (TextUtils.isEmpty(phone)){
                     mPhone.setError("Phone number is required");
                     return;
                 }
@@ -67,9 +65,11 @@ public class Login_Form extends AppCompatActivity {
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
 
                             if (snapshot.child("User").child(phone).exists()){
+                                System.out.println(phone);
+                                System.out.println(password);
                                 Helper helper = snapshot.child("User").child(phone).getValue(Helper.class);
                                 if(helper.getPhone().equals(phone)){
-                                    if (helper.getPass().equals(password)){
+                                    if (helper.getPassword().equals(password)){
                                         Toast.makeText(Login_Form.this,"Login is Successful",Toast.LENGTH_SHORT).show();
 
                                         Intent intent = new Intent(Login_Form.this,MainActivity.class);
@@ -90,7 +90,7 @@ public class Login_Form extends AppCompatActivity {
 
                         }
                     });
-                }*/
+                }
 
             }
         });
