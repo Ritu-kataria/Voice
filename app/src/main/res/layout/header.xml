@@ -20,7 +20,7 @@
         android:id="@+id/textid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome to Voice based prescription!"
+        android:text="Welcome to Voicify!"
         android:textColor="@color/white"
         android:textSize="18sp"
         android:layout_marginTop="5dp"/>

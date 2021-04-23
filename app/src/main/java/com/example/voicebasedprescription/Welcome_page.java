@@ -14,7 +14,7 @@ public class Welcome_page extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome_page);
-        getSupportActionBar().setTitle("Welcome Page");
+        getSupportActionBar().setTitle("voicify");
         btn_welc = (findViewById(R.id.btn_welcome));
 
         btn_welc.setOnClickListener(new View.OnClickListener() {

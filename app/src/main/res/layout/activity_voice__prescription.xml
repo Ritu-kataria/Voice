@@ -1,29 +1,195 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Voice_Prescription">
-    
-    <TextView
-        android:id="@+id/txt_output"
-        android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/GridLayout1"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="22sp"
-        android:textAlignment="center"
-        android:layout_marginTop="30dp"
-        android:padding="2dp"/>
+        android:columnCount="2"
+        android:rowCount="6"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:layout_marginLeft="20dp"
+        tools:context=".GridXMLActivity" >
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/pname"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="Enter Patient Name"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-    <Button
-        android:id="@+id/btn_mic"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:paddingBottom="20dp"
-        android:backgroundTint="@color/purple_500"
-        android:text="@string/tap_to_open_mic"
-        android:textSize="20sp"
-        android:layout_alignParentBottom="true"
-        android:onClick="btn_Speech"/>
-    
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+        <ImageView
+            android:id="@+id/btnSpeak1"
+            android:tag="txtName"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="8dp"
+            android:gravity="right"
+            android:layout_marginTop="33dp"
+            android:onClick="getSpeechInput"
+            android:src="@drawable/ic_mic"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/pgender"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="Enter Patient Gender"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+        <ImageView
+            android:id="@+id/btnSpeak6"
+            android:tag="txtGender"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="8dp"
+            android:gravity="right"
+            android:layout_marginTop="33dp"
+            android:onClick="getSpeechInput"
+            android:src="@drawable/ic_mic"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/page"
+            android:layout_width="300dp"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter Patient Age"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <ImageView
+            android:id="@+id/btnSpeak2"
+            android:tag="txtAge"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="33dp"
+            android:gravity="left"
+            android:onClick="getSpeechInput"
+            android:src="@drawable/ic_mic"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/dignosis"
+            android:layout_width="300dp"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:hint="Diagnosis"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <ImageView
+            android:id="@+id/btnSpeak3"
+            android:tag="txtDig"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="33dp"
+            android:gravity="left"
+            android:onClick="getSpeechInput"
+            android:src="@drawable/ic_mic"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/medicine"
+            android:layout_width="300dp"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter Medicine Name"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <ImageView
+            android:id="@+id/btnSpeak4"
+            android:tag="txtMed"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="33dp"
+            android:layout_marginLeft="8dp"
+            android:gravity="left"
+            android:onClick="getSpeechInput"
+            android:src="@drawable/ic_mic"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/description"
+            android:layout_width="300dp"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter Advice if any"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <ImageView
+            android:id="@+id/btnSpeak5"
+            android:tag="txtAdv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="33dp"
+            android:layout_marginLeft="8dp"
+            android:gravity="left"
+            android:onClick="getSpeechInput"
+            android:src="@drawable/ic_mic"/>
+
+    </GridLayout>
+    <!--    <ImageView-->
+    <!--        android:id="@+id/btnSpeak"-->
+    <!--        android:layout_width="100dp"-->
+    <!--        android:layout_height="100dp"-->
+    <!--        android:layout_alignParentBottom="true"-->
+    <!--        android:layout_centerHorizontal="true"-->
+    <!--        android:layout_marginBottom="60dp"-->
+    <!--        android:gravity="center"-->
+    <!--        android:onClick="getSpeechInput"-->
+    <!--        android:src="@drawable/ic_mic"/-->
+
+        <Button
+            android:id="@+id/idBtnGeneratePDF"
+            android:tag="btn"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="500dp"
+            android:text="Generate PDF"
+            android:textAlignment="center"
+            android:onClick="generatePDF"
+            android:padding="10dp"
+            android:layout_marginLeft="23dp"
+            />
+
+
 </RelativeLayout>
+

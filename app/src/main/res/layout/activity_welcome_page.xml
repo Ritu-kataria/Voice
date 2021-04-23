@@ -17,10 +17,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:text="Welcome!"
+        android:text="Welcome to voicify!"
         android:textAlignment="center"
         android:textColor="@color/purple_500"
-        android:textSize="40sp" />
+        android:textSize="35sp" />
     <Button
         android:id="@+id/btn_welcome"
         android:layout_width="match_parent"
