@@ -1,34 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="30dp"
     tools:context=".Welcome_page">
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:src="@drawable/doctor"
-        android:contentDescription="TODO" />
 
     <TextView
-        android:layout_width="match_parent"
+        android:id="@+id/appname"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="Welcome to voicify!"
-        android:textAlignment="center"
-        android:textColor="@color/purple_500"
-        android:textSize="35sp" />
-    <Button
-        android:id="@+id/btn_welcome"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:text="Continue"
-        android:textSize="22sp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/button_rounded"/>
+        android:textColor="#FF018786"
+        android:text="Welcome to Voicify!"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"/>
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:layout_centerInParent="true"
+        app:lottie_autoPlay="true"
+        android:id="@+id/lottie"
+        app:lottie_rawRes="@raw/doctor_consultation"
+        android:elevation="5dp"/>
 
 
-</LinearLayout>
+</RelativeLayout>

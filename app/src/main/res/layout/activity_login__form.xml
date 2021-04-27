@@ -29,9 +29,9 @@
             android:layout_height="wrap_content"
             android:autofillHints=""
             android:ems="10"
-            android:text="2222222222"
+            android:text="@string/_2222222222"
             android:id="@+id/l_phone"
-            android:hint="Phone"
+            android:hint="@string/phone_no"
             android:inputType="text"
             android:textSize="22sp" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -50,8 +50,8 @@
             android:layout_height="wrap_content"
             android:autofillHints=""
             android:ems="10"
-            android:hint="Password"
-            android:text="rrrrrrrr"
+            android:hint="@string/password_pass"
+            android:text="@string/rrrrrrrr"
             android:id="@+id/l_pswd"
             android:inputType="textPassword"
             android:textSize="22sp" />

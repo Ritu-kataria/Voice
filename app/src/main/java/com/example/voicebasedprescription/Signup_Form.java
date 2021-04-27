@@ -39,7 +39,6 @@ public class Signup_Form extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup__form);
-        getSupportActionBar().setTitle("Signup Form");
 
         //for the getting the ref of database
         reference = FirebaseDatabase.getInstance().getReference();

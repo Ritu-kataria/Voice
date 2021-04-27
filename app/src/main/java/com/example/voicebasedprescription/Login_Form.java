@@ -33,7 +33,6 @@ public class Login_Form extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login__form);
-        getSupportActionBar().setTitle("Login Form");
         mPhone = (findViewById(R.id.l_phone));
         mPassword = (findViewById(R.id.l_pswd));
         btn_sinup = (findViewById(R.id.regbtn));
