@@ -6,22 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".Login_Form"
     android:orientation="vertical"
-    android:padding="30dp">
+    android:padding="30dp"
+    android:background="@color/white">
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="220dp"
-        android:src="@drawable/login1_icon"
-        android:padding="50dp"
+        android:src="@drawable/doctmic"
         android:id="@+id/loginicon"
-        android:background="@drawable/button_rounded"
-        android:contentDescription="@string/todo" />
+        android:contentDescription="@string/todo1" />
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:focusable="true"
         android:focusableInTouchMode="true"
-        android:textColorHint="@color/black"
+        android:textColorHint="#FF018786"
         tools:ignore="MissingConstraints">
 
         <EditText
@@ -31,7 +30,7 @@
             android:ems="10"
             android:text="@string/_2222222222"
             android:id="@+id/l_phone"
-            android:hint="@string/phone_no"
+            android:hint="@string/phone1"
             android:inputType="text"
             android:textSize="22sp" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -41,7 +40,7 @@
         android:layout_marginTop="10dp"
         android:focusable="true"
         android:focusableInTouchMode="true"
-        android:textColorHint="@color/black"
+        android:textColorHint="#FF018786"
         tools:ignore="MissingConstraints"
         app:passwordToggleEnabled="true">
 
@@ -50,8 +49,8 @@
             android:layout_height="wrap_content"
             android:autofillHints=""
             android:ems="10"
-            android:hint="@string/password_pass"
-            android:text="@string/rrrrrrrr"
+            android:hint="@string/pass1"
+            android:text="@string/rrrrrrrrs"
             android:id="@+id/l_pswd"
             android:inputType="textPassword"
             android:textSize="22sp" />
@@ -62,16 +61,20 @@
         android:layout_height="60dp"
         android:text="@string/login"
         android:textSize="22sp"
+        android:textColor="@color/white"
         android:layout_marginTop="40dp"
-        android:background="@drawable/button_rounded"/>
+        android:background="#FF018786"
+        android:backgroundTint="@color/teal_700"/>
     <Button
         android:id="@+id/regbtn"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:text="@string/register"
         android:textSize="22sp"
+        android:textColor="@color/white"
         android:layout_marginTop="10dp"
-        android:background="@drawable/button_rounded"/>
+        android:background="@drawable/button_rounded"
+        android:backgroundTint="@color/teal_700"/>
 
 
 

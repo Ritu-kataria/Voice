@@ -27,4 +27,9 @@
     <string name="phone_no">Phone</string>
     <string name="password_pass">Password</string>
     <string name="rrrrrrrr">rrrrrrrr</string>
+    <string name="todo1">TODO</string>
+    <string name="rrrrrrrrs">rrrrrrrr</string>
+    <string name="pass1">Password</string>
+    <string name="phone1">Phone</string>
+
 </resources>
