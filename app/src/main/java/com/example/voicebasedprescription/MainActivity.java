@@ -10,6 +10,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 import android.widget.Toolbar;
 
@@ -20,12 +22,28 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     DrawerLayout drawerLayout;
     NavigationView navigationView;
+    Button btnprofile,btnmic,btnqrscan,btnpresc;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        btnprofile=(Button)findViewById(R.id.buttonprofile);
+        btnmic=(Button)findViewById(R.id.buttonmic);
+        btnqrscan=(Button)findViewById(R.id.buttonqrscan);
+        btnpresc=(Button)findViewById(R.id.buttonpresc);
+
+        btnprofile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Myprofile.class);
+                startActivity(intent);
+
+                Toast.makeText(MainActivity.this, "My Profile", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
@@ -65,6 +83,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 Intent intent = new Intent(MainActivity.this,Voice_Prescription.class);
                 startActivity(intent);
                 break;
+            case R.id.nav_logout:
+                Intent intent1 = new Intent(MainActivity.this, Login_Form.class);
+                startActivity(intent1);
         }
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
