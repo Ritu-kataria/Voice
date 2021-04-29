@@ -45,6 +45,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         });
 
+        btnqrscan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, QRcode_Scanner.class);
+                startActivity(intent);
+
+                Toast.makeText(MainActivity.this, "Scan QR Code", Toast.LENGTH_SHORT).show();
+            }
+        });
+
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
 
