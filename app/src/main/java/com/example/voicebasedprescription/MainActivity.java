@@ -55,6 +55,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         });
 
+        btnmic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Voice_Prescription.class);
+                startActivity(intent);
+
+                Toast.makeText(MainActivity.this, "Record prescription", Toast.LENGTH_SHORT).show();
+            }
+        });
+
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
 

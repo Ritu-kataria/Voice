@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
+
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -37,6 +39,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import android.graphics.pdf.PdfDocument;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -45,9 +48,20 @@ import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.zxing.WriterException;
+import androidmads.library.qrgenearator.QRGContents;
+import androidmads.library.qrgenearator.QRGEncoder;
+import android.graphics.Bitmap;
+import android.graphics.Point;
+import android.util.Log;
+import android.view.Display;
+import android.view.View;
+import android.view.WindowManager;
 
 import java.util.ArrayList;
 import java.util.Locale;
+
+
 
 
 public class Voice_Prescription extends AppCompatActivity {
@@ -62,6 +76,10 @@ public class Voice_Prescription extends AppCompatActivity {
     //views from activity
     private TextInputLayout txtName,txtGender,txtAge,txtDig,txtMed,txtAdv;
     EditText Pname, Pgender,Page,Pdiagnosis,Pmed,Padvice;
+    Bitmap bitmap;
+    QRGEncoder qrgEncoder;
+
+
     /*Button pdfbtn;
     Bitmap bmp,scaledbmp;
     int pageWidth=1200;
@@ -130,7 +148,7 @@ public class Voice_Prescription extends AppCompatActivity {
         canvas.drawText("Health Choice Clinic", 209, 80, title);
 
         dateFormat=new SimpleDateFormat("dd/mm/yy");
-        canvas.drawText("Date: "+dateFormat.format(dateobj),1160,20, date);
+        canvas.drawText("Date: "+dateFormat.format(dateobj),1110,20, date);
 
 //
         pName.setTypeface(Typeface.defaultFromStyle(Typeface.NORMAL));
@@ -169,20 +187,47 @@ public class Voice_Prescription extends AppCompatActivity {
         String tempAdv = txtAdv.getEditText().getText().toString();
         canvas.drawText("Advice : "+tempAdv, 100, 330, pAdv);
 
+        WindowManager manager = (WindowManager) getSystemService(WINDOW_SERVICE);
+        Display display = manager.getDefaultDisplay();
+        Point point = new Point();
+        display.getSize(point);
+        int width = point.x;
+        int height = point.y;
+        int dimen = width < height ? width : height;
+        dimen = dimen * 3 / 4;
+        dimen = dimen - 350;
+        String allText = txtName.getEditText().getText().toString() + "\n"+ txtAge.getEditText().getText().toString()  + "\n"+ txtDig.getEditText().getText().toString()  + "\n"+ txtMed.getEditText().getText().toString() + "\n"+ txtAdv.getEditText().getText().toString();
+        qrgEncoder = new QRGEncoder(allText, null, QRGContents.Type.TEXT, dimen);
+        try {
+            bitmap = qrgEncoder.encodeAsBitmap();
+            //qrCodeIV.setImageBitmap(bitmap);
+        } catch (WriterException e) {
+            // this method is called for
+            // exception handling.
+            Log.e("Tag", e.toString());
+        }
+
+        Canvas canvas2 = myPage.getCanvas();
+        canvas2.drawBitmap(bitmap, 56, 400, paint);
+
+
 
         title.setTypeface(Typeface.defaultFromStyle(Typeface.NORMAL));
         title.setColor(ContextCompat.getColor(this, R.color.purple_200));
         title.setTextSize(12);
         title.setTextAlign(Paint.Align.CENTER);
-        canvas.drawText("This is a E-Prescription, please check date on the top", 396, 560, title);
+        canvas.drawText("This is an E-Prescription", 396, 900, title);
         pdfDocument.finishPage(myPage);
         File file = new File(Environment.getExternalStorageDirectory(), "Ritu_22_04_2021.pdf");
+
+
+
 
         try {
 
             pdfDocument.writeTo(new FileOutputStream(file));
 
-            Toast.makeText(Voice_Prescription.this, "PDF file generated succesfully.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(Voice_Prescription.this, "PDF file generated successfully.", Toast.LENGTH_SHORT).show();
         } catch (IOException e) {
 
             e.printStackTrace();

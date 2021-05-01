@@ -69,11 +69,17 @@ public class Login_Form extends AppCompatActivity {
                                 Helper helper = snapshot.child("User").child(phone).getValue(Helper.class);
                                 if(helper.getPhone().equals(phone)){
                                     if (helper.getPassword().equals(password)){
+
+
                                         Toast.makeText(Login_Form.this,"Login is Successful",Toast.LENGTH_SHORT).show();
+
+
 
                                         Intent intent = new Intent(Login_Form.this,MainActivity.class);
                                         startActivity(intent);
                                         finish();
+
+
                                     }else {
                                         Toast.makeText(Login_Form.this,"Credentials is Mismatch ",Toast.LENGTH_SHORT).show();
                                     }
@@ -82,6 +88,9 @@ public class Login_Form extends AppCompatActivity {
                                 Toast.makeText(Login_Form.this,"Mobile Number is not Registered ",Toast.LENGTH_SHORT).show();
                             }
                         }
+
+
+
 
                         @Override
                         public void onCancelled(@NonNull DatabaseError error) {

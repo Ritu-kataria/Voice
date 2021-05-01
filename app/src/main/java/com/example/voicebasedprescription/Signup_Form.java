@@ -116,18 +116,26 @@ public class Signup_Form extends AppCompatActivity {
                             userdatamap.put("Password",password);
 
 
+
+
                             reference.child("User").child(phone).updateChildren(userdatamap).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if (task.isSuccessful()){
                                         Intent intent = new Intent(Signup_Form.this,Login_Form.class);
                                         startActivity(intent);
+
+
+
+
                                     }
                                 }
                             });
                         }
 
                     }
+
+
 
                     @Override
                     public void onCancelled(@NonNull DatabaseError error) {
