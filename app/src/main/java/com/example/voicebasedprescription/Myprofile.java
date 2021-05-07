@@ -23,8 +23,8 @@ public class Myprofile extends AppCompatActivity {
     String phone1,pswd1;
     FirebaseDatabase database;
     DatabaseReference userRef;
-    private static final String USER="user";
-    String phone;
+
+    String Phone;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +32,7 @@ public class Myprofile extends AppCompatActivity {
         setContentView(R.layout.activity_myprofile);
 
         Intent intent = getIntent();
-        phone = intent.getStringExtra("phone");
+        Phone = intent.getStringExtra("Phone");
 
         fullname = findViewById(R.id.Full_name_profile);
         email = findViewById(R.id.email_profile);
@@ -41,7 +41,7 @@ public class Myprofile extends AppCompatActivity {
         fullnamelabel = findViewById(R.id.label_profile);
 
         database = FirebaseDatabase.getInstance();
-        userRef = database.getReference(USER);
+        userRef = database.getReference("User");
 
         userRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -49,13 +49,13 @@ public class Myprofile extends AppCompatActivity {
 
                 for(DataSnapshot ds : dataSnapshot.getChildren()){
 
-                    if(ds.child("phone").getValue().equals(phone)){
+                    if(ds.child("Phone").getValue().equals(Phone)){
 
-                        fullnamelabel.setText(ds.child("name").getValue(String.class));
-                        fullname.getEditText().setText(ds.child("name").getValue(String.class));
-                        phoneNo.getEditText().setText(phone);
-                        email.getEditText().setText(ds.child("email").getValue(String.class));
-                        password.getEditText().setText(ds.child("password").getValue(String.class));
+                        fullnamelabel.setText(ds.child("Name").getValue(String.class));
+                        fullname.getEditText().setText(ds.child("Name").getValue(String.class));
+                        phoneNo.getEditText().setText(Phone);
+                        email.getEditText().setText(ds.child("Email").getValue(String.class));
+                        password.getEditText().setText(ds.child("Password").getValue(String.class));
 
 
                     }

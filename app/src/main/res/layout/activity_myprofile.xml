@@ -58,7 +58,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/person"
-            android:drawablePadding="10dp"/>
+            android:drawablePadding="10dp"
+            android:background="@color/white"
+            android:text="Ritu kataria"/>
 
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
@@ -76,7 +78,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/ic_baseline_phone_24"
-            android:drawablePadding="10dp"/>
+            android:drawablePadding="10dp"
+            android:background="@color/white"
+            android:text="6201394464"/>
 
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
@@ -94,7 +98,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/ic_baseline_email_24"
-            android:drawablePadding="10dp"/>
+            android:drawablePadding="10dp"
+            android:background="@color/white"
+            android:text="ritukataria987@gmail.com"/>
 
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
@@ -112,7 +118,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/ic_baseline_lock_24"
-            android:drawablePadding="10dp"/>
+            android:drawablePadding="10dp"
+            android:background="@color/white"
+            android:text="voiceritu"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 

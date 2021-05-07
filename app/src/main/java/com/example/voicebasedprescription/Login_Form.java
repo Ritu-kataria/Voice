@@ -9,6 +9,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -25,6 +26,7 @@ public class Login_Form extends AppCompatActivity {
     FirebaseAuth fauth;
     DatabaseReference reference;
     Helper helper;
+    TextView forgotbtn;
 
 
 
@@ -36,11 +38,22 @@ public class Login_Form extends AppCompatActivity {
         mPhone = (findViewById(R.id.l_phone));
         mPassword = (findViewById(R.id.l_pswd));
         btn_sinup = (findViewById(R.id.regbtn));
+        forgotbtn = findViewById(R.id.forgotBTN);
         helper= new Helper();
 
         loginbtn1 =(findViewById(R.id.loginbtn));
         fauth =FirebaseAuth.getInstance();
         reference = FirebaseDatabase.getInstance().getReference();
+
+
+        forgotbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Login_Form.this,ResetPassword.class);
+                startActivity(intent);
+            }
+        });
+
 
         loginbtn1.setOnClickListener(new View.OnClickListener() {
             @Override

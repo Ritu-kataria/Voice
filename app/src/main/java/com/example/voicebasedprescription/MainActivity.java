@@ -65,6 +65,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         });
 
+        btnpresc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ShareFile.class);
+                startActivity(intent);
+
+                Toast.makeText(MainActivity.this, "Share prescription", Toast.LENGTH_SHORT).show();
+            }
+        });
+
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
 
@@ -72,6 +82,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         Menu menu =navigationView.getMenu();
         menu.findItem(R.id.nav_login).setVisible(false);
+        menu.findItem(R.id.nav_search).setVisible(false);
 
         navigationView.bringToFront();
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawerLayout,R.string.navigation_drawer_open,R.string.navigation_drawer_close);

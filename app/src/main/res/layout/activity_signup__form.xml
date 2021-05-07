@@ -28,7 +28,8 @@
             android:id="@+id/name"
             android:hint="@string/enter_name"
             android:inputType="text"
-            android:textSize="22sp" />
+            android:textSize="22sp"
+            android:background="@color/white"/>
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
@@ -47,7 +48,8 @@
             android:id="@+id/phone"
             android:inputType="text"
             android:textSize="22sp"
-            android:autofillHints="" />
+            android:autofillHints=""
+            android:background="@color/white"/>
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
@@ -66,7 +68,8 @@
             android:id="@+id/email"
             android:inputType="text"
             android:textSize="22sp"
-            android:importantForAutofill="no" />
+            android:importantForAutofill="no"
+            android:background="@color/white"/>
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
@@ -85,7 +88,8 @@
             android:id="@+id/pswd"
             android:inputType="text"
             android:textSize="22sp"
-            android:autofillHints="" />
+            android:autofillHints=""
+            android:background="@color/white"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -105,7 +109,8 @@
             android:id="@+id/c_pswd"
             android:hint="@string/confirm_password"
             android:inputType="text"
-            android:textSize="22sp" />
+            android:textSize="22sp"
+            android:background="@color/white"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <RadioGroup
@@ -139,30 +144,30 @@
             />
 </RadioGroup>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/string_choose"
-        android:textSize="20sp"/>
+    <!--<TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="@string/string_choose"
+       android:textSize="20sp"/>
 
-    <CheckBox
-        android:id="@+id/CboxD"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/doctor"
-        android:textColor="@color/teal_700"
-        android:textSize="20sp"
-        android:orientation="horizontal"
-        android:layout_marginTop="0dp"/>
-    <CheckBox
-        android:id="@+id/CboxP"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/patient"
-        android:textColor="@color/teal_700"
-        android:textSize="20sp"
-        android:orientation="horizontal"
-        android:layout_marginTop="0dp"
+  <CheckBox
+       android:id="@+id/CboxD"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="@string/doctor"
+       android:textColor="@color/teal_700"
+       android:textSize="20sp"
+       android:orientation="horizontal"
+       android:layout_marginTop="0dp"/>
+   <CheckBox
+       android:id="@+id/CboxP"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="@string/patient"
+       android:textColor="@color/teal_700"
+       android:textSize="20sp"
+       android:orientation="horizontal"
+       android:layout_marginTop="0dp"-->
         />
     <Button
         android:id="@+id/reg1btn"
@@ -170,7 +175,7 @@
         android:layout_height="60dp"
         android:text="@string/register"
         android:textSize="22sp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/button_rounded"
         android:backgroundTint="@color/teal_700"/>
 

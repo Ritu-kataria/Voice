@@ -218,7 +218,7 @@ public class Voice_Prescription extends AppCompatActivity {
         title.setTextAlign(Paint.Align.CENTER);
         canvas.drawText("This is an E-Prescription", 396, 900, title);
         pdfDocument.finishPage(myPage);
-        File file = new File(Environment.getExternalStorageDirectory(), "Ritu_22_04_2021.pdf");
+        File file = new File(Environment.getExternalStorageDirectory(), "E-Prescription.pdf");
 
 
 

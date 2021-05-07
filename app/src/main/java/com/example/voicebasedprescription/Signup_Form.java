@@ -28,7 +28,7 @@ import java.util.HashMap;
 public class Signup_Form extends AppCompatActivity {
 
     EditText name, email, phone, pass, con_pass;
-    CheckBox doc, patient;
+    //CheckBox doc, patient;
     RadioButton RbtnM, RbtnF;
     String text;
     Button reg1btn;
@@ -50,8 +50,8 @@ public class Signup_Form extends AppCompatActivity {
         con_pass = (findViewById(R.id.c_pswd));
         RbtnF = (findViewById(R.id.RbtnF));
         RbtnM = (findViewById(R.id.RbtnM));
-        doc = (findViewById(R.id.CboxD));
-        patient = (findViewById(R.id.CboxP));
+        //doc = (findViewById(R.id.CboxD));
+        //patient = (findViewById(R.id.CboxP));
         reg1btn =(findViewById(R.id.reg1btn));
 
         fauth = FirebaseAuth.getInstance();
@@ -90,7 +90,7 @@ public class Signup_Form extends AppCompatActivity {
                     return;
 
                 } else {
-                    if (doc.isChecked()) {
+                    /*if (doc.isChecked()) {
 
                         text = "1";
 
@@ -98,7 +98,7 @@ public class Signup_Form extends AppCompatActivity {
 
                         text = "0";
 
-                    }
+                    }*/
                     validateDetails(Name,Email,Phone,Password);
                 }
 
